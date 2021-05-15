@@ -1,0 +1,18 @@
+function ImagePopup({ card, onClose }){
+    return(
+<div className={`popup popup_type_add-card ${card.link ? "popup_opened" : ""}`}>
+            <div className="popup__overlay popup__overlay_card">
+                <div className="popup__form-card">
+                    <button className="popup__close popup__close_card"
+                            aria-label="Закрыть" type="reset"
+                            onClick={onClose}
+                    />
+                    <img src={`${card.link}`} alt="" className="popup__image"/>
+                    {/*<h3 className="popup__name"/>*/}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default ImagePopup
