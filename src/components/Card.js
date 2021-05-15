@@ -2,6 +2,7 @@ function Card({card, onCardClick}){
     function handleClick(){
         onCardClick(card);
     }
+
     return(
             <div className="element">
                 <img src={`${card.link}`}
@@ -19,7 +20,6 @@ function Card({card, onCardClick}){
                 </div>
                 <button className="element__delete" type="button" aria-label="Удалить"/>
             </div>
-
     )
 }
 

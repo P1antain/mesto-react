@@ -15,7 +15,7 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick}){
                 setCards(cards);
             })
             .catch((err) => {
-                console.log(err);
+                console.log(err, true);
         });
     }, []);
     return(

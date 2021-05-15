@@ -1,10 +1,10 @@
 import React from "react";
 import '../index.css';
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
-import PopupWithForm from "./PopupWithForm";
-import ImagePopup from "./ImagaPopup";
+import Header from "./Header.js";
+import Main from "./Main.js";
+import Footer from "./Footer.js";
+import PopupWithForm from "./PopupWithForm.js";
+import ImagePopup from "./ImagaPopup.js";
 
 function App() {
     const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
@@ -12,7 +12,7 @@ function App() {
     const [isAddPlacePopupOpen, setAddPlacePopupOpen] = React.useState(false);
 
     const [selectedCard, setSelectedCard] = React.useState({});
-    const [error, setError] = React.useState({ errorText: "", isActive: false });
+    // const [error, setError] = React.useState({ errorText: "", isActive: false });
 
     function handleEditAvatarClick() {
         setEditAvatarPopupOpen(true);
@@ -37,9 +37,7 @@ function App() {
 
         setSelectedCard({});
     }
-    function setErrorPopup(err, active) {
-        setError({ ...error, errorText: err, isActive: active });
-    }
+
 
     return (
       <div className="page">
@@ -49,7 +47,6 @@ function App() {
             onAddPlace={handleAddPlaceClick}
             onEditAvatar={handleEditAvatarClick}
             onCardClick={handleCardClick}
-            onError={setErrorPopup}
         />
         <Footer/>
         <PopupWithForm
@@ -114,7 +111,7 @@ function App() {
 
         <ImagePopup card={selectedCard} onClose={closeAllPopups} />
 
-        </div>
+      </div>
   );
 }
 

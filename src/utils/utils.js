@@ -1,7 +1,7 @@
 const apiSettings = {
-    baseUrl: "https://mesto.nomoreparties.co/v1",
+    url: "https://mesto.nomoreparties.co/v1",
     groupId: "cohort-22",
-    token: "a835ebe3-157b-4140-922b-a5f49168fcac",
+    token: "c64c7158-2414-4469-9e6c-496f1ef4fdaa",
 };
 
 export { apiSettings };
