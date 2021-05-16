@@ -22,7 +22,7 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, onCardClick}){
         <main className="content">
             <section className="profil">
                 <div className="profil__place">
-                    <img src={{backgroundImage: `url(${userInfo.userAvatar})`}}
+                    <img src={userInfo.userAvatar}
                          alt="Аватар" className="profil__avatar"/>
                     <button
                         className="profil__replace"

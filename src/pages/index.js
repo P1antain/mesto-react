@@ -9,7 +9,7 @@ import Api from "../components/api.js";
 import {popupOpenProfile, inputProfileName,
         inputProfileInfo, popupOpenImage,
         formElementProfile, formElementImage,
-        submitButtons, className, popupOpenAvatar, formElementAvatar} from "../utils/utils.js";
+        submitButtons, className, popupOpenAvatar, formElementAvatar} from "../utils/constants.js";
 
 //Добавляем класс для проверки валидации полей
 const profileFormValidity = new FormValidator(className, formElementProfile);

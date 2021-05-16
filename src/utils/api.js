@@ -1,4 +1,4 @@
-import {apiSettings} from "./utils.js";
+import {apiSettings} from "./constants.js";
 
 class Api {
     constructor ({url,groupId, token}) {
