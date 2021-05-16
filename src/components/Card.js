@@ -6,7 +6,7 @@ function Card({card, onCardClick}){
     return(
             <div className="element">
                 <img src={`${card.link}`}
-                     alt=""
+                     alt={card.name}
                      className="element__image"
                      onClick={handleClick}
                 />
