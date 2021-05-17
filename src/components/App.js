@@ -12,7 +12,6 @@ function App() {
     const [isAddPlacePopupOpen, setAddPlacePopupOpen] = React.useState(false);
 
     const [selectedCard, setSelectedCard] = React.useState({});
-    // const [error, setError] = React.useState({ errorText: "", isActive: false });
 
     function handleEditAvatarClick() {
         setEditAvatarPopupOpen(true);
