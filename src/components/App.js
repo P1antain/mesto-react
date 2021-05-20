@@ -77,13 +77,13 @@ function App() {
             >
             <section className="popup__section">
                 <input className="popup__input popup__input_type_name" type="text"
-                       defaultValue="" placeholder="Ваше имя"
+                       defaultValue="" placeholder="Название"
                        name="name" minLength="2" maxLength="40" required/>
                 <span className="popup__input-error"/>
             </section>
             <section className="popup__section">
                 <input className="popup__input popup__input_type_profession" type="text"
-                       defaultValue="" placeholder="Род вашей деятельности"
+                       defaultValue="" placeholder="Ссылка на картинку"
                        name="about" minLength="2" maxLength="200" required/>
                 <span className="popup__input-error"/>
             </section>
