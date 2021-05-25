@@ -112,6 +112,14 @@ class Api {
         })
             .then(this._checkData);
     }
+    changeLikeCardStatus(card, likeCardStatus) {
+        return fetch(`${this._url}/${this._groupId}/cards/likes/${card._id}`, {
+            method: (likeCardStatus ? "PUT": "DELETE"),
+            headers: {
+                authorization: this._token,
+            },
+        }).then(this._checkData);
+    }
 }
 
 const api = new Api(apiSettings);
