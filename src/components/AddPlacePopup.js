@@ -23,6 +23,9 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}){
         setLink(evt.target.value);
     }
 
+    function handleInputSelect(evt){
+        evt.target.select()
+    }
     return(
         <PopupWithForm
             title="Новое место"
@@ -39,6 +42,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}){
                        name="name" value={name}
                        minLength="2" maxLength="40"
                        onChange={handleChangeTitle}
+                       onFocus={handleInputSelect}
                        required
                 />
                 <span className="popup__input-error"/>
@@ -50,6 +54,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}){
                        name="about" value={link}
                        minLength="2" maxLength="200"
                        onChange={handleChangeLink}
+                       onFocus={handleInputSelect}
                        required
                 />
                 <span className="popup__input-error"/>

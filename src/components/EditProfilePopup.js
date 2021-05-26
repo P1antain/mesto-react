@@ -26,6 +26,9 @@ function EditProfilePopup({isOpen, onClose, onUpdateUser}){
         evt.preventDefault();
         onUpdateUser({name, about: description})
     }
+    function handleInputSelect(evt){
+        evt.target.select()
+    }
 return(
     <PopupWithForm
         title='Редактировать профиль'
@@ -42,6 +45,7 @@ return(
                    name="name" value={name}
                    minLength="2" maxLength="40"
                    onChange={handleChangeName}
+                   onFocus={handleInputSelect}
                    required
             />
             <span className="popup__input-error"/>
@@ -53,6 +57,7 @@ return(
                    name="about" value={description}
                    minLength="2" maxLength="200"
                    onChange={handleChangeAbout}
+                   onFocus={handleInputSelect}
                    required
             />
             <span className="popup__input-error"/>

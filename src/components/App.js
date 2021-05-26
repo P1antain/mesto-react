@@ -149,8 +149,8 @@ function App() {
         />
         <Footer/>
         <EditProfilePopup isOpen={isEditProfilePopupOpen}
-                           onClose={closeAllPopups}
-                           onUpdateUser={handleUpdateUser}
+                          onClose={closeAllPopups}
+                          onUpdateUser={handleUpdateUser}
         />
         <EditAvatarPopup isOpen={isEditAvatarPopupOpen}
                          onClose={closeAllPopups}

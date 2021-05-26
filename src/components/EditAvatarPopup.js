@@ -17,7 +17,9 @@ function EditAvatarPopup({isOpen, onClose, onUpdateAvatar}){
     function handleChangeAvatar(evt) {
         setLink(evt.target.value);
     }
-
+    function handleInputSelect(evt){
+        evt.target.select()
+    }
 
     return(
         <PopupWithForm
@@ -34,6 +36,7 @@ function EditAvatarPopup({isOpen, onClose, onUpdateAvatar}){
                        placeholder="Ссылка на картинку"
                        name="link" value={link}
                        onChange={handleChangeAvatar}
+                       onFocus={handleInputSelect}
                        required
                 />
                 <span className="popup__input-error"/>
