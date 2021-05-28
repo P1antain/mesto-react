@@ -1,14 +1,8 @@
-function ImagePopup({ card, onClose }){
-
-    function closeOverlay(evt){
-        if(evt.target === evt.currentTarget){
-            onClose()
-        }
-    }
+function ImagePopup({ card, onClose, altClose }){
 
     return(
 <div className={`popup popup_type_add-card ${card.link ? "popup_opened" : ""}`}>
-            <div className="popup__overlay popup__overlay_card" onClick={closeOverlay}>
+            <div className="popup__overlay popup__overlay_card" onClick={altClose}>
                 <div className="popup__form-card" >
                     <button className="popup__close popup__close_card"
                             aria-label="Закрыть" type="reset"

@@ -1,7 +1,7 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
-function AddPlacePopup({isOpen, onClose, onAddPlace}){
+function AddPlacePopup({isOpen, onClose, altClose ,onAddPlace}){
     const [name, setName] = React.useState('');
     const [link, setLink] = React.useState('');
 
@@ -33,6 +33,7 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}){
             buttonSubmitText="Создать"
             isOpen={isOpen}
             onClose={onClose}
+            altClose={altClose}
             onSubmit={handleAddPlaceSubmit}
         >
             <section className="popup__section">

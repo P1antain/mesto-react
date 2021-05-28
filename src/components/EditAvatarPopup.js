@@ -1,7 +1,7 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
-function EditAvatarPopup({isOpen, onClose, onUpdateAvatar}){
+function EditAvatarPopup({isOpen, onClose, altClose, onUpdateAvatar}){
     const [link, setLink] = React.useState('');
 
 
@@ -29,6 +29,7 @@ function EditAvatarPopup({isOpen, onClose, onUpdateAvatar}){
             onSubmit={handleSubmit}
             isOpen={isOpen}
             onClose={onClose}
+            altClose={altClose}
         >
             <section className="popup__section">
                 <input className="popup__input popup__input_type_avatar"

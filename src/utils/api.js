@@ -1,9 +1,8 @@
 import {apiSettings} from "./constants.js";
 
 class Api {
-    constructor ({url,groupId, token}) {
+    constructor ({url, token}) {
         this._url = url;
-        this._groupId = groupId;
         this._token = token;
     }
 
@@ -15,7 +14,7 @@ class Api {
     }
 
     getUserInfo() {
-        return fetch(`${this._url}/${this._groupId}/users/me`, {
+        return fetch(`${this._url}/users/me`, {
             method: 'GET',
             headers: {
                 authorization: this._token
@@ -25,7 +24,7 @@ class Api {
     }
 
     getInitialCards() {
-        return fetch(`${this._url}/${this._groupId}/cards`, {
+        return fetch(`${this._url}/cards`, {
             method: 'GET',
             headers: {
                 authorization: this._token
@@ -39,7 +38,7 @@ class Api {
     }
 
     setUserInfo(user) {
-        return fetch(`${this._url}/${this._groupId}/users/me`, {
+        return fetch(`${this._url}/users/me`, {
             method: 'PATCH',
             headers: {
                 authorization: this._token,
@@ -54,7 +53,7 @@ class Api {
     }
 
     addCard(card) {
-        return fetch(`${this._url}/${this._groupId}/cards`, {
+        return fetch(`${this._url}/cards`, {
             method: 'POST',
             headers: {
                 authorization: this._token,
@@ -69,7 +68,7 @@ class Api {
     }
 
     deleteCard (card) {
-        return fetch(`${this._url}/${this._groupId}/cards/${card._id}`, {
+        return fetch(`${this._url}/cards/${card._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: this._token
@@ -80,7 +79,7 @@ class Api {
     }
 
     setLike(card) {
-        return fetch(`${this._url}/${this._groupId}/cards/likes/${card._id}`, {
+        return fetch(`${this._url}/cards/likes/${card._id}`, {
             method: 'PUT',
             headers: {
                 authorization: this._token
@@ -90,7 +89,7 @@ class Api {
     }
 
     deleteLike(card) {
-        return fetch(`${this._url}/${this._groupId}/cards/likes/${card._id}`, {
+        return fetch(`${this._url}/cards/likes/${card._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: this._token
@@ -100,7 +99,7 @@ class Api {
     }
 
     updateAvatar(link) {
-        return fetch(`${this._url}/${this._groupId}/users/me/avatar`, {
+        return fetch(`${this._url}/users/me/avatar`, {
             method: 'PATCH',
             headers: {
                 authorization: this._token,
@@ -113,7 +112,7 @@ class Api {
             .then(this._checkData);
     }
     changeLikeCardStatus(card, likeCardStatus) {
-        return fetch(`${this._url}/${this._groupId}/cards/likes/${card._id}`, {
+        return fetch(`${this._url}/cards/likes/${card._id}`, {
             method: (likeCardStatus ? "PUT": "DELETE"),
             headers: {
                 authorization: this._token,

@@ -1,14 +1,8 @@
-function PopupWithForm({title, name, buttonSubmitText, children, isOpen, onClose, onSubmit}){
-
-function closeOverlay(evt){
-    if(evt.target === evt.currentTarget){
-        onClose()
-    }
-}
+function PopupWithForm({title, name, buttonSubmitText, children, isOpen, onClose, onSubmit, altClose}){
 
     return(
             <div className={`popup ${isOpen ? "popup_opened" : ""}`}>
-                <div className="popup__overlay" onClick={closeOverlay}>
+                <div className="popup__overlay" onClick={altClose}>
                     <form className="popup__form" name={`form-edit-${name}`} onSubmit={onSubmit} noValidate>
                         <button className="popup__close" aria-label="Закрыть" type="reset" onClick={onClose}/>
                         <h3 className="popup__edit">{title}</h3>

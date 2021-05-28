@@ -2,7 +2,7 @@ import React from "react";
 import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
-function EditProfilePopup({isOpen, onClose, onUpdateUser}){
+function EditProfilePopup({isOpen, onClose, onUpdateUser, altClose}){
     const [name, setName] = React.useState("name");
     const [description, setDescription] = React.useState("about");
 
@@ -37,6 +37,7 @@ return(
         onSubmit={handleSubmit}
         isOpen={isOpen}
         onClose={onClose}
+        altClose={altClose}
     >
         <section className="popup__section">
             <input className="popup__input popup__input_type_name"

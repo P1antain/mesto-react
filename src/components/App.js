@@ -99,6 +99,12 @@ function App() {
         setSelectedCard({});
     }
 
+    function closeOverlay(evt){
+        if(evt.target === evt.currentTarget){
+            closeAllPopups()
+        }
+    }
+
     function handleCardLike(card) {
         const isLiked = card.likes.some(i => i._id === currentUser._id);
         api.changeLikeCardStatus(card, !isLiked)
@@ -131,6 +137,14 @@ function App() {
         document.addEventListener('keyup', handleEscClose);
     }, [])
 
+    // React.useEffect(()=>{
+    //     function handleOverlayClose(evt) {
+    //         if(evt.target.classList.contains('popup__overlay')){
+    //             closeAllPopups()
+    //         }
+    //     }
+    //     document.addEventListener('mousedown', handleOverlayClose);
+    // }, [])
 
 
     return (
@@ -151,14 +165,17 @@ function App() {
         <EditProfilePopup isOpen={isEditProfilePopupOpen}
                           onClose={closeAllPopups}
                           onUpdateUser={handleUpdateUser}
+                          altClose={closeOverlay}
         />
         <EditAvatarPopup isOpen={isEditAvatarPopupOpen}
                          onClose={closeAllPopups}
                          onUpdateAvatar={handleUpdateAvatar}
+                         altClose={closeOverlay}
         />
         <AddPlacePopup isOpen={isAddPlacePopupOpen}
                        onClose={closeAllPopups}
                        onAddPlace={handleAddCard}
+                       altClose={closeOverlay}
         />
 
         <DeleteCardPopup isOpen={isDeletePopup}
@@ -167,7 +184,7 @@ function App() {
                          onSubmitDelete={handleCardDelete}
         />
 
-        <ImagePopup card={selectedCard} onClose={closeAllPopups} />
+        <ImagePopup card={selectedCard} onClose={closeAllPopups} altClose={closeOverlay}/>
     </CurrentUserContext.Provider>
   </div>
   );
