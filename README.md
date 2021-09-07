@@ -1,74 +1,54 @@
-<<<<<<< HEAD
-# mesto-react
-=======
-# Getting Started with Create React App
+# Проект Mesto
+## Что же за Mesto?
+>Mesto - это интерактивная страница, где люди делятся фотографиями их любимых мест. А также оценивают фотографии других пользователей.
+______
+## Перед началом работы проверить
+1) В консоли проверяем установлен ли Node.js
+* `node -v`
+* `npm -v`
+2) Наличие установленной программы(Windows OS)
+* `Наличие Git Bush`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Если все установленно смотрим **Запуск**
 
-## Available Scripts
+## Установка (Windows OS)
+1) [Node.js](https://nodejs.org/en/)
+2) [Git Bash](https://gitforwindows.org/index.html)
 
-In the project directory, you can run:
+## Запуск проекта
+1) С помощью Git Bush выполняем команду
 
-### `npm start`
+`git clone https://github.com/P1antain/mesto-react.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2) Открываем работу, в проектной среде через терминал выполняем команду(устанавливаем модули для локального сервера)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm install`
 
-### `npm test`
+3) Запускаем локальный сервер командой через терминал
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm start`
 
-### `npm run build`
+### Сборка проекта
+Возможна сборка проекта под сервер, для сборки проекта используйте команду
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm run build`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Используемые технологии в проекте
++ React
++ Бэм
 
-### `npm run eject`
+#### Возможности проекта
+> Видеть все добавленные изображения пользователей сервиса
+>> Добавлять новые фотографии от себя, ставить им лайки, видеть количество поставленных лайков от других людей
+>
+>> Удалять свои фотографии
+>
+> Редактировать профиль
+>> В проекте присутствуют 2 профиля: Изображение аватара и Информация о пользователе
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Спасибо за внимание
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> master
+<p align="center">
+<img src="https://99px.ru/sstorage/86/2015/12/image_86271215043043632690.gif"  alt="image"/>
+</p>
